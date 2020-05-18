@@ -5,10 +5,10 @@ export PATH
 # ====================================================
 #	System Request:CentOS 6+ 、Debian 7+、Ubuntu 14+
 #	Author:	Rat's
+#   Updator:Demo
 #	Dscription: Socat一键脚本
 #	Version: 1.0
-#	Blog: https://www.infvie.com
-#	Github:https://github.com/Einic/Socat
+#	Github:https://github.com/demo2099/Socat
 # ====================================================
 
 Green="\033[32m"
@@ -63,9 +63,9 @@ get_ip(){
 
 config_socat(){
     echo -e "${Green}请输入Socat配置信息！${Font}"
-    read -p "请输入本地端口:" port1
-    read -p "请输入远程端口:" port2
-    read -p "请输入远程IP:" socatip
+    read -p "请输入本地端口(不能看Netflix VPS任意端口):" port1
+    read -p "请输入远程端口(可以看Netflix VPS搭建了v2ray ws模式的端口):" port2
+    read -p "请输入远程IP(可以看Netflix的vps IP):" socatip
 }
 
 start_socat(){
