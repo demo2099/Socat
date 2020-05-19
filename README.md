@@ -22,11 +22,14 @@ kill -9 pid
 Socat卸载
 
 Centos系统：
+
 yum remove socat
 
 
 Debian/Ubuntu系统：
+
 sudo apt-get remove socat
+
 sudo apt-get autoremove
 
 
