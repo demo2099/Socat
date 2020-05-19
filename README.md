@@ -10,4 +10,21 @@ Socat一键安装脚本
 
 按要求输入本地服务器端口，要转发的目标端口和服务器IP即可！
 
+停止转发
+ps -ef | grep socat
+输入上面的命令找到socat程序的PID，然后用下面的命令KILL掉这个PID进程（PID是个数字，自己替换下面的”pid”）。
+​
+
+kill -9 pid
+
+Socat卸载
+
+Centos系统：
+yum remove socat
+
+
+Debian/Ubuntu系统：
+sudo apt-get remove socat
+sudo apt-get autoremove
+
 
