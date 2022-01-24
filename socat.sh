@@ -63,6 +63,7 @@ get_ip(){
 
 config_socat(){
     echo -e "${Green}请输入Socat配置信息！${Font}"
+    stty erase ^H
     read -p "请输入本地端口(不能看Netflix VPS任意端口):" port1
     read -p "请输入远程端口(可以看Netflix VPS搭建了v2ray ws模式的端口):" port2
     read -p "请输入远程IP(可以看Netflix的vps IP):" socatip
@@ -128,6 +129,8 @@ systemctl start rc-local >/dev/null 2>&1
     echo -e "${Blue}你的本地端口为:${port1}${Font}"
     echo -e "${Blue}你的远程端口为:${port2}${Font}"
     echo -e "${Blue}你的本地服务器IP为:${ip}${Font}"
+    echo -e "生成的转发的文件位置/etc/rc.local"
+    echo -e "转发产生的日志位置/root/socat.log"
     exit 0
 }
 
